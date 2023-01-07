@@ -1,5 +1,3 @@
-const tiempoActual = new Date();
-
 const dayString = document.querySelector('.day-string');
 const dateInfo = document.querySelector('.date-info');
 const time = document.querySelector('.time');
@@ -10,9 +8,10 @@ const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto
 const days = ['Domingo','Lunes','Martes','Míercoles','Jueves','Viernes','Sábado'];
 
 const getDate = ()=>{
-    dayString.textContent = days[tiempoActual.getDay()];
-    dateInfo.textContent = tiempoActual.getDate()+' de '+months[tiempoActual.getMonth()] +' del '
-    +tiempoActual.getFullYear();
+    const days = new Date();
+    dayString.textContent = days[days.getDay()];
+    dateInfo.textContent = days.getDate()+' de '+months[days.getMonth()] +' del '
+    +days.getFullYear();
 }
 
 addEventListener('load',()=>{
