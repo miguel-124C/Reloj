@@ -10,30 +10,10 @@ const hour = document.querySelector('.hour');
 const minute = document.querySelector('.minute');
 const second = document.querySelector('.second');
 
-const months = {
-    0:'Enero',
-    1:'Febrero',
-    2:'Marzo',
-    3:'Abril',
-    4:'Mayo',
-    5:'Junio',
-    6:'Julio',
-    7:'Agosto',
-    8:'Septiembre',
-    9:'Octubre',
-    10:'Noviembre',
-    11:'Diciembre'
-}
+const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre',
+'Octubre','Noviembre','Diciembre'];
 
-const days = {
-    0:'Domingo',
-    1:'Lunes',
-    2:'Martes',
-    3:'Míercoles',
-    4:'Jueves',
-    5:'Viernes',
-    6:'Sábado',
-}
+const days = ['Domingo','Lunes','Martes','Míercoles','Jueves','Viernes','Sábado'];
 
 const setDate = ()=>{
     dayString.textContent = days[tiempoActual.getDay()];
