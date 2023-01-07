@@ -21,19 +21,24 @@ body{
 }
 
 .main{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 1000px;
-    min-height: 850px;
-    gap: 150px;
+    height: 850px;
 }
 
 .main .weather{
     background: var(--color-sobresale);
+    height: 40%;
+    width: 100%;
 }
 
 .main .clock{
     position: relative;
     width: 100%;
+    height: 50%;
     background: var(--color-fondo);
     border: 5px solid var(--color-sobresale);
     border-radius: 100px;
@@ -49,7 +54,7 @@ body{
     width: 70%;
     top: -5px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     background: #000;
     border-bottom: 5px solid var(--color-sobresale);
     border-left: 5px solid var(--color-sobresale);
@@ -62,4 +67,47 @@ body{
     font-size: 8em;
     justify-content: space-evenly;
     width: 100%;
+}
+
+@media screen and (max-width : 1080px) and (min-width : 720px){
+    .main{
+        width: 700px;
+        height: 800px;
+    }
+
+    .main .weather, .main .clock{
+        height: 38%;
+        width: 95%;
+    }
+
+    .main .clock .date{
+        font-size: 2.5em;
+        height: 60px;
+    }
+
+    .main .clock .time{
+        font-size: 6.5em;
+    }
+}
+
+@media  screen and (max-width : 720px) {
+    .main{
+        width: 480px;
+        height: 800px;
+    }
+
+    .main .weather, .main .clock{
+        height: 25%;
+        width: 100%;
+    }
+
+    .main .clock .date{
+        font-size: 1.4em;
+        height: 40px;
+        width: 60%;
+    }
+
+    .main .clock .time{
+        font-size: 4.3em;
+    }
 }
