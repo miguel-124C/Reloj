@@ -1,0 +1,65 @@
+:root{
+    --color-sobresale: #f50;
+    --color-fondo: linear-gradient(#000,#111,#222);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    font-weight: 580;
+    color: var(--color-sobresale);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+
+.main{
+    display: grid;
+    width: 1000px;
+    min-height: 850px;
+    gap: 150px;
+}
+
+.main .weather{
+    background: var(--color-sobresale);
+}
+
+.main .clock{
+    position: relative;
+    width: 100%;
+    background: var(--color-fondo);
+    border: 5px solid var(--color-sobresale);
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .clock .date{
+    font-size: 3em;
+    position: absolute;
+    height: 70px;
+    width: 70%;
+    top: -5px;
+    display: flex;
+    justify-content: space-around;
+    background: #000;
+    border-bottom: 5px solid var(--color-sobresale);
+    border-left: 5px solid var(--color-sobresale);
+    border-right: 5px solid var(--color-sobresale);
+
+}
+
+.main .clock .time{
+    display: flex;
+    font-size: 8em;
+    justify-content: space-evenly;
+    width: 100%;
+}
